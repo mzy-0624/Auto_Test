@@ -19,13 +19,13 @@ auto_test:
 	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
 run:
 	@if [ ! -e data.out ]; then 	\
-		make data;					\
+		make data;		\
 	fi
 	@if [ ! -e totest.out ]; then	\
-		make totest;				\
+		make totest;		\
 	fi
-	@if [ ! -e std.out ]; then		\
-		make std;					\
+	@if [ ! -e std.out ]; then	\
+		make std;		\
 	fi
 	./auto_test
 test:
