@@ -10,13 +10,13 @@ make:
 	@make totest;
 	@make std;
 data:
-	@$(CC) $(CFLAGS)   data.out   data.cpp $(DFLAGS)
+	@$(CC) $(CFLAGS)   data.out      data.cpp $(DFLAGS)
 totest:
-	@$(CC) $(CFLAGS) totest.out totest.cpp $(DFLAGS) 	
+	@$(CC) $(CFLAGS) totest.out    totest.cpp $(DFLAGS) 	
 std:
-	@$(CC) $(CFLAGS)    std.out    std.cpp $(DFLAGS)
-dp:
-	@$(CC) $(CFLAGS)	dp			dp.cpp $(DFLAGS)
+	@$(CC) $(CFLAGS)    std.out       std.cpp $(DFLAGS)
+auto_test:
+	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
 run:
 	@if [ ! -e data.out ]; then 	\
 		make data;					\
@@ -27,9 +27,9 @@ run:
 	@if [ ! -e std.out ]; then		\
 		make std;					\
 	fi
-	./dp
+	./auto_test
 test:
 	make;
-	./dp;
+	./auto_test;
 clean:
 	@rm -f *.out *.txt *.in *.d
