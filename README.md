@@ -12,13 +12,13 @@
 
 需要测试的代码，输入由 data.in 给出，输出写入到 std.txt 文件中。
 
-### dp.cpp
+### auto_test.cpp
 
-对拍文件，自动测试，dp 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
+对拍文件，自动测试，auto_test 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
 
 ### Makefile
-##### make dp
-	编译 dp.cpp，dp 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 dp 可执行文件后，执行 make dp 命令
+##### make auto_test
+	编译 auto_test.cpp，auto_test 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 dp 可执行文件后，执行 make auto_test 命令
 ##### make data
 	编译 data.cpp
 ##### make std
