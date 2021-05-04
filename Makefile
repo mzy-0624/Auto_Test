@@ -16,7 +16,7 @@ totest:
 std:
 	@$(CC) $(CFLAGS)    std.out       std.cpp $(DFLAGS)
 auto_test:
-	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
+	@$(CC) $(CFLAGS)  auto_test auto_test.cpp $(DFLAGS)
 run:
 	@if [ ! -e data.out ]; then 	\
 		make data;		\
