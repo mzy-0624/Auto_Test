@@ -14,7 +14,7 @@
 
 ### auto_test.cpp
 
-对拍文件，自动测试，auto_test 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
+自动测试，auto_test 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
 
 ### Makefile
 ##### make auto_test
