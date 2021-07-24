@@ -18,7 +18,7 @@
 
 ### Makefile
 ##### make auto_test
-	编译 auto_test.cpp，auto_test 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 dp 可执行文件后，执行 make auto_test 命令
+	编译 auto_test.cpp，auto_test 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 auto_test 可执行文件后，执行 make auto_test 命令
 ##### make data
 	编译 data.cpp
 ##### make std
