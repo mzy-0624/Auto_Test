@@ -28,9 +28,9 @@
 ##### make
 	编译 data.cpp, std.cpp 和 totest.cpp
 ##### make run
-	在缺少相应的可执行文件时，会先编译相应的源文件，然后再执行 ./dp
+	在缺少相应的可执行文件时，会先编译相应的源文件，然后再执行 ./auto_test
 ##### make test
-	重新编译 data.cpp, std.cpp 和 totest.cpp，然后再执行 ./dp
+	重新编译 data.cpp, std.cpp 和 totest.cpp，然后再执行 ./auto_test
 ##### make clean
 	强制删除 *.d, *.out, *.in, *.txt
 
