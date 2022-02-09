@@ -17,19 +17,23 @@ totest:
 std:
 	@$(CC) $(CFLAGS)    std.out       std.cpp $(DFLAGS)
 auto_test:
+<<<<<<< HEAD
 	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
 py:
 	make;
 	./cpp.out;
+=======
+	@$(CC) $(CFLAGS)  auto_test auto_test.cpp $(DFLAGS)
+>>>>>>> 67e9da853c010ccbeed48414590828bb4e7ea4b3
 run:
 	@if [ ! -e data.out ]; then 	\
-		make data;					\
+		make data;		\
 	fi
 	@if [ ! -e totest.out ]; then	\
-		make totest;				\
+		make totest;		\
 	fi
-	@if [ ! -e std.out ]; then		\
-		make std;					\
+	@if [ ! -e std.out ]; then	\
+		make std;		\
 	fi
 	./auto_test
 test:

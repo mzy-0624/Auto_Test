@@ -14,11 +14,11 @@
 
 ### auto_test.cpp
 
-对拍文件，自动测试，auto_test 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
+自动测试，auto_test 可执行文件不会被 make clean 删除，如需要重新编译可手动删除
 
 ### Makefile
 ##### make auto_test
-	编译 auto_test.cpp，auto_test 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 dp 可执行文件后，执行 make auto_test 命令
+	编译 auto_test.cpp，auto_test 的可执行文件一般不会被删除，所以一般不需要进行编译，可以在手动删除 auto_test 可执行文件后，执行 make auto_test 命令
 ##### make data
 	编译 data.cpp
 ##### make std
@@ -28,9 +28,9 @@
 ##### make
 	编译 data.cpp, std.cpp 和 totest.cpp
 ##### make run
-	在缺少相应的可执行文件时，会先编译相应的源文件，然后再执行 ./dp
+	在缺少相应的可执行文件时，会先编译相应的源文件，然后再执行 ./auto_test
 ##### make test
-	重新编译 data.cpp, std.cpp 和 totest.cpp，然后再执行 ./dp
+	重新编译 data.cpp, std.cpp 和 totest.cpp，然后再执行 ./auto_test
 ##### make clean
 	强制删除 *.d, *.out, *.in, *.txt
 
