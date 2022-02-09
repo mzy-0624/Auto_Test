@@ -1,9 +1,10 @@
 CC = g++
-OP ?= 
+OP ?=  
 FSANITIZE = address
-CFLAGS = $(OP) -Wall -Werror -std=c++17 -o
-DFLAGS = $(DEBUG) #-fsanitize=$(FSANITIZE) 
-DEBUG = #-D__DEBUG__
+WALL ?= #-Wall
+WERROR ?= #-Werror
+CFLAGS = $(OP) $(WALL) $(WERROR) -std=c++17 -o
+DFLAGS = -D__AUTO_TEST__ 
 
 make:
 	@make data;
@@ -17,6 +18,9 @@ std:
 	@$(CC) $(CFLAGS)    std.out       std.cpp $(DFLAGS)
 auto_test:
 	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
+py:
+	make;
+	./cpp.out;
 run:
 	@if [ ! -e data.out ]; then 	\
 		make data;					\
