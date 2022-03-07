@@ -12,8 +12,10 @@ int rand_int(int l, int r)
 int main(void)
 {
 	freopen("data.in", "w", stdout);
-	int N = rand_int(2, 20);
-	
+	int N = rand_int(100000, 1000000);
+	printf("%d\n", N);
+	while (N--)
+		printf("%d ", rand_int(1, INT_MAX - 1));
 	fclose(stdout);
 	return 0;
 }

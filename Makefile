@@ -17,14 +17,7 @@ totest:
 std:
 	@$(CC) $(CFLAGS)    std.out       std.cpp $(DFLAGS)
 auto_test:
-<<<<<<< HEAD
-	@$(CC) $(CFLAGS)  auto_test	auto_test.cpp $(DFLAGS)
-py:
-	make;
-	./cpp.out;
-=======
 	@$(CC) $(CFLAGS)  auto_test auto_test.cpp $(DFLAGS)
->>>>>>> 67e9da853c010ccbeed48414590828bb4e7ea4b3
 run:
 	@if [ ! -e data.out ]; then 	\
 		make data;		\

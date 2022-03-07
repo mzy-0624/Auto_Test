@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define maxn 200005
+#include <stdio.h>
+#define max(a, b) ((a) > (b) ? (a) : (b))
+int n, a[1000010] = { 0 }, b[1000010] = { 0 }, c[1000010] = { 0 };
+int gcd(int a, int b)
+{
+	return b == 0 ? a : gcd(b, a % b);
+}
 char *S, *T;
 int main(void)
 {
@@ -12,25 +18,19 @@ int main(void)
 #ifdef __DEBUG__
 	freopen("data.in", "r", stdin);
 #endif
-	S = (char *)malloc(sizeof(char) * maxn);
-	T = (char *)malloc(sizeof(char) * maxn);
-	scanf("%s%s", S, T);
-	int lenS = strlen(S), lenT = strlen(T);
-	for (int i = 0; i <= lenS - lenT; i++)
-	{
-		char *s = S, *t = T;
-		while (*s == *t)
-		{
-			s++;
-			t++;
-			if (*t == '\0')
-			{
-				printf("%d ", i);
-				break;
-			}
-		}
-		S++;
-	}
+	scanf("%d", &n);
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    b[1] = a[0];
+    c[n - 2] = a[n - 1];
+    for (int i = 2; i < n; i++)
+        b[i] = gcd(a[i - 1], b[i - 1]);
+    for (int i = n - 3; i >= 0; i--)
+        c[i] = gcd(a[i + 1], c[i + 1]);
+	int m = 0;
+	for (int i = 0; i < n; i++)
+		m = max(m, gcd(b[i], c[i]));
+	printf("%d\n", m);
 #ifdef __AUTO_TEST__
 	fclose(stdin);
 	fclose(stdout);
